@@ -9,8 +9,12 @@ if (isset($_GET['p'])) {
 } else {
     $p = 'home';
 }
+
+
 // Crée une instance de la classe Database dans l'espace de noms App, en passant 'blog' comme paramètre au constructeur. Cette étape suppose que vous avez une classe Database qui gère la connexion à la base de données.
-$db = new App\Database('blog');
+// $db = new App\Database('blog');
+
+
 //  Démarre la temporisation de sortie. Cela signifie que la sortie qui serait normalement envoyée au navigateur est mise en mémoire tampon.
 ob_start();
 // En fonction de la valeur de $p, inclut dynamiquement le fichier correspondant. Si $p est 'home', il inclut '../pages/home.php'; sinon, s'il est 'single', il inclut '../pages/single.php'.
